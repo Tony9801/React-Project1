@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Tasks from './Components/Tasks';
 import { useState } from "react"
+import AddTask from './Components/AddTask';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
   return (
     <div className="container">
       <Header title='Hello World'/>
+      <AddTask />
       {tasks.length > 0 ? <Tasks tasks = {tasks} onDelete={deleteTask}
       onToggle={toggleReminder}/> : 'No Tasks to show'}
     </div>
